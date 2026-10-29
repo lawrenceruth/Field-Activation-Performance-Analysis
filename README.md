@@ -105,3 +105,14 @@ Work completion health — whether logged activities are completed, overdue or p
 The analysis shows that sample distribution accounts for approximately 72% of recorded task units, while approximately 75% of activity records are completed. At the same time, 219 records are overdue and 157 remain pending, indicating a measurable outstanding workload.
 The interactive Area slicer allows management to move from the overall campaign picture to area-level operational patterns, making the dashboard useful for routine field-performance monitoring and follow-up.
 
+## Project Resources
+
+- **Project WorkBook:** [View the Workbook](assets/Excel_WorkBook.xlsx)
+- **PDF Project Report:** [Read the report](docs/Project_Report.pdf)
+- **Live Dashboard:** [Open the GlowRoot interactive dashboard](assets/Dashboard.PNG)
+
+## Contact
+
+Lawrence Ruth: lawrenceruth34@gmail.com · [LinkedIn](https://www.linkedin.com/in/ruth-lawrence-8519073b7) · [GitHub](https://github.com/lawrenceruth)
+
+*Glowroot Field Activation Performance Analysis is a portfolio project for learning and demonstration from LeadHer Foundation Instistute. Its results should not be read as commercial evidence.*
