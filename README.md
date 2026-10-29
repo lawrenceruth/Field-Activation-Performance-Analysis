@@ -2,20 +2,58 @@
 
 *Field Activation Performance Dashboard · Microsoft Excel · Retail Activation Analytics*
 
-![Dashboard](assets/dashboard.png)
+![Dashboard](assets/GlowRoot_Naturals.PNG)
 
-## The business problem
-GlowRoot Naturals, a skincare and haircare brand, runs an in-store promoter campaign across retail outlets in Lagos. Promoters log their daily work: outlet visits, compliance checks, product demos, sales conversions and samples distributed.
+## Executive Summary
 
-The log is a flat file of 1,506 rows. It tells the Trade Marketing team everything and nothing at a glance. Management needed quick answers to three questions:
+GlowRoot campaign is running at **75% completion**, but its effort is heavily skewed towards one activity and one half of its outlets carry most of the load.
 
-1. **Where is field activity concentrated**, by outlet, area and task type?
-2. **How long do promoters take** to complete their activities?
-3. **How much of the logged work is actually finished**, and how much is overdue or still pending?
+**Sampling dominates the campaign.** Of the 6,498 task units logged, **4,681 (about 72%) are samples distributed**. Outlet visits account for 434 units, sales conversions for 821 (about 13%), product demos for 353 and compliance checks for 209. The field team is mostly handing out samples, and the log gives no way to tell whether that is leading to sales.
 
-This project turns that log into a single-page, interactive Excel dashboard that answers them, with an Area slicer so a manager can move from the campaign total to any one area.
+**Effort is unevenly spread across outlets.** Justrite Yaba (671), Ebeano Supermarket Lekki (665), Grand Square Ikeja (592) and SPAR Ikorodu (536) lead. Shoprite Ikeja logged only 116 units, less than a fifth of Justrite Yaba's. Whether that gap reflects footfall, promoter allocation or outlet requirements is the first thing management should establish.
 
-## What the analysis shows
+**A quarter of the work is not done.** Of 1,506 records, **1,130 (75.0%) are completed**. The remaining 376 are outstanding: **219 overdue (14.5%) and 157 pending (10.4%)**. Overdue work outweighs pending work, which means more activities have already missed their expected completion point than are still waiting to start.
+
+**Completion rates differ by area.** Yaba completes about 80.1% of its records, Lekki 75.3% and Onikan 73.6%. Lekki has the most overdue records of the three (34 of 235), a detail the campaign-wide 75% hides.
+
+**Promoters take different amounts of time.** The overall average is **26.37 minutes** per activity, but individual promoter averages range from **21.39 to 33.33 minutes**. That is a spread of nearly 12 minutes. The data cannot say why, since task mix and outlet conditions both affect timing, so this is a prompt for follow-up and not a performance verdict.
+
+**Quality is steady at 77%** on average across activities, which suggests the main issue is completion and distribution of effort, not the standard of the work that gets done.
+
+**What this means for management:** clear the 219 overdue activities first, decide whether the 157 pending ones should be completed, rescheduled or reassigned, and investigate why outlet volumes differ so widely before moving promoters around. Finally, check whether the heavy sampling is turning into demos and sales conversions. 
+
+## Business Context
+
+GlowRoot Naturals is a skincare and haircare brand conducting an in-store promoter campaign across multiple retail outlets in Lagos.
+Promoters record daily activities performed at different outlets, including:
+- Outlet Visits 
+- Compliance Checks 
+- Product Demos 
+- Sales Conversions 
+- Samples Distributed.
+
+The Trade Marketing team needs a simple way to understand:
+- Where field activity is concentrated.
+- How efficiently promoters are working.
+- How much of the logged work is actually being completed.
+
+## Objectives
+The objective of this project is to transform GlowRoot Naturals' raw field activation activity log into an interactive Excel dashboard that enables management to:
+- Monitor field activity volume. 
+- Measure task completion. 
+- Evaluate promoter completion times. 
+- Monitor quality scores. 
+- Compare activity across outlets and areas. 
+- Identify overdue and pending activities. 
+- Support operational decision-making using data.
+
+  ## Data Overview
+
+The source is a flat field activity log of **1,506 records across 9 columns**. Each row is one logged activity by a promoter at an outlet.
+Before analysis, the data was converted to an Excel Table and checked for blank rows, duplicate records, data types and inconsistent text. The dataset has no information on customer traffic, task complexity, promoter experience or travel distance, which limits how far the results can be explained. See [docs/methodology.md](docs/methodology.md) for the full cleaning steps.
+![Data Preview](assets/Raw_Data.PNG)
+
+## Key Insights
 
 **Sampling is the campaign.** Of 6,498 task units logged, 4,681 (about 72%) are samples distributed. Sales conversions (821) and product demos (353) are far smaller, so the campaign's output is overwhelmingly sampling.
 
@@ -35,14 +73,8 @@ This project turns that log into a single-page, interactive Excel dashboard that
 
 Average quality score across all activities is **77%**.
 
-## Dashboard KPIs
-| KPI | Value | How it is calculated |
-|---|---|---|
-| Total Task Completed | 4,715 | Sum of *Tasks Completed* where Status = Completed |
-| Average Completion Time | 26.37 mins | Average of *Completion Time (mins)* |
-| Average Quality Score | 77% | Average of *Quality Score (%)* |
-
-**Read the task numbers carefully.** 6,498 is task units across *all* statuses; 4,715 is task units on *completed* records only; 1,130 is the count of completed *records*. They measure different things and should not be quoted interchangeably.
+## Dashboard
+![Dashboard](assets/Dashboard.PNG)
 
 ## What I would recommend
 - **Find out why outlet volumes differ so much.** Customer traffic, promoter allocation, outlet characteristics and campaign requirements are the first things to rule in or out.
@@ -59,11 +91,17 @@ KPI cards sit across the top, with a Key Insight panel on the left. The main vis
 
 To explore it, open the workbook, go to **Interactive_Dashboard** and click an area. KPI formulas are in the *cleaned_Dataset* sheet, columns M:N.
 
-## Repository contents
-```
-├── README.md
-├── data/        GlowRoot_Field_Activation.xlsx (cleaned data, pivots, dashboard)
-├── assets/      dashboard.png and pivot/chart screenshots
-└── docs/
-    └── methodology.md   data cleaning, KPI logic, pivot configurations
-```
+## Tools Used
+* Microsoft Excel ( For data upload and analysis )
+* Pivot tables ( For quick analysis)
+* Pivot charts ( For Visualisation)
+
+  ## Conclusion
+  The GlowRoot Naturals Field Activation Performance Dashboard transforms a task-level field activity log into a centralized management view.
+The analysis identifies three important dimensions of field execution:
+Activity concentration — where and what type of work is being performed. 
+Promoter efficiency — how long activities take to complete. 
+Work completion health — whether logged activities are completed, overdue or pending. 
+The analysis shows that sample distribution accounts for approximately 72% of recorded task units, while approximately 75% of activity records are completed. At the same time, 219 records are overdue and 157 remain pending, indicating a measurable outstanding workload.
+The interactive Area slicer allows management to move from the overall campaign picture to area-level operational patterns, making the dashboard useful for routine field-performance monitoring and follow-up.
+
