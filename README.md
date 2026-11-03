@@ -3,7 +3,7 @@
 *Field Activation Performance Dashboard · Microsoft Excel · Retail Activation Analytics*
 
 ![Dashboard](assets/GlowRoot_Naturals.PNG)
-
+**Project resources:** [Dashboard Report](data/GlowRootFieldData.xlsx) | [Project Report](docs/Project_Report.pdf) | [Project Methodology](docs/methodology.md)
 ## Executive Summary
 
 GlowRoot campaign is running at **75% completion**, but its effort is heavily skewed towards one activity and one half of its outlets carry most of the load.
